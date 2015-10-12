@@ -32,7 +32,7 @@ echo ""
 
 ## Quality filter
 echo "Running quality filtering ... "
-cmd="trimmomatic SE -phred33 $infq $hqfq ILLUMINACLIP:/nas02/apps/trimmomatic-0.32/Trimmomatic-0.32/adapters/TruSeq3-SE.fa:2:30:10 SLIDINGWINDOW:5:25 TRAILING:20 LEADING:20 MINLEN:36"
+cmd="trimmomatic SE -threads 6 -phred33 $infq $hqfq ILLUMINACLIP:/nas02/apps/trimmomatic-0.32/Trimmomatic-0.32/adapters/TruSeq3-SE.fa:2:30:10 SLIDINGWINDOW:5:25 TRAILING:20 LEADING:20 MINLEN:36"
 echo "EXECUTING: $cmd"
 $cmd
 
